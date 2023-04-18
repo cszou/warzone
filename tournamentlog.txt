@@ -1,0 +1,70 @@
+
+Tournament Mode:
+M: l europe.map Asia_1200.map 
+P: Aggressive Neutral Cheater Benevolent 
+G: 4
+D: 10
+
+Results:
+                    Game 1              Game 2              Game 3              Game 4              
+l                   Aggressive          Neutral             Neutral             Cheater             
+europe.map          Draw                Draw                Draw                Draw                
+Asia_1200.map       Neutral             Aggressive          Cheater             Cheater             
+-----------------------------------------
+
+
+Tournament Mode:
+M: l europe.map Asia_1200.map 
+P: Aggressive Cheater Benevolent Neutral 
+G: 4
+D: 10
+
+Results:
+                    Game 1              Game 2              Game 3              Game 4              
+l                   Aggressive          Cheater             Cheater             Cheater             
+europe.map          Cheater             Cheater             Draw                Cheater             
+Asia_1200.map       Neutral             Cheater             Cheater             Cheater             
+-----------------------------------------
+
+
+Tournament Mode:
+M: l europe.map Asia_1200.map 
+P: Cheater Benevolent Neutral Aggressive 
+G: 4
+D: 10
+
+Results:
+                    Game 1              Game 2              Game 3              Game 4              
+l                   Aggressive          Cheater             Aggressive          Cheater             
+europe.map          Neutral             Cheater             Cheater             Draw                
+Asia_1200.map       Cheater             Cheater             Cheater             Draw                
+-----------------------------------------
+
+
+Tournament Mode:
+M: l europe.map Asia_1200.map 
+P: Benevolent Aggressive Cheater Neutral 
+G: 4
+D: 20
+
+Results:
+                    Game 1              Game 2              Game 3              Game 4              
+l                   Aggressive          Cheater             Cheater             Cheater             
+europe.map          Draw                Cheater             Draw                Cheater             
+Asia_1200.map       Cheater             Aggressive          Cheater             Aggressive          
+-----------------------------------------
+
+
+Tournament Mode:
+M: l europe.map Asia_1200.map 
+P: Neutral Benevolent Aggressive Cheater 
+G: 4
+D: 20
+
+Results:
+                    Game 1              Game 2              Game 3              Game 4              
+l                   Aggressive          Cheater             Cheater             Aggressive          
+europe.map          Cheater             Cheater             Draw                Cheater             
+Asia_1200.map       Neutral             Cheater             Cheater             Draw                
+-----------------------------------------
+
