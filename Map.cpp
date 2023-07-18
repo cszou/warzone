@@ -535,12 +535,8 @@ vector<Territory *> Territory::getNeighbours()
 bool Territory::checkNeighbours(Territory *k)
 {
 	for (auto t : getNeighbours())
-	{
 		if (t == k)
-		{
 			return true;
-		}
-	}
 	return false;
 }
 

@@ -7,7 +7,7 @@ using std::cin;
 
 //load the map and make sure a valid map is loaded.
 void testLoadMaps() {
-	cout << "Part 1: Map" << endl;
+	cout << "********** Part 1: Map **********" << endl;
 	Map* gameMap = nullptr;
 	string ans = "y";
 	while(ans == "y")

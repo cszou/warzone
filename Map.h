@@ -43,12 +43,12 @@ private:
 class Continent {
 public:
 	Continent(); //default constructor
-	Continent(string name, int num); //constructor with name and bonus
-	Continent(const Continent& c); //copy constructor
-	Continent& operator =(Continent& c); //assignment operator
+	Continent(string, int); //constructor with name and bonus
+	Continent(const Continent&); //copy constructor
+	Continent& operator =(Continent&); //assignment operator
 	int getTerritoryNumber() const; //get total number of territories
 	string getName() const; //get continent name
-	void addTerritories(Territory* t); //add a territory to a continent
+	void addTerritories(Territory*); //add a territory to a continent
 	void showAllTerritories(); //show info of all territories in this continent
 	vector<Territory*> getTerritories(); //get territories
 	bool validate(); //validate the continent in connected
@@ -60,7 +60,7 @@ private:
 	int bonus; //bonus if all territories are controlled by one player
 	string continentName; //name
 	vector<Territory*> territoriesList; //vactor to store the territories
-	void traverse(Territory* t, vector<bool>& v); //helper method for DFS traverses
+	void traverse(Territory*, vector<bool>&); //helper method for DFS traverses
 	bool inContinent(Territory* t); //helper method to check if the territory is in the continent, return true if in
 };
 

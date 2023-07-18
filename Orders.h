@@ -4,78 +4,97 @@ using std::vector;
 #include <string>
 using std::string;
 #include <ostream>
+#include <iostream>
+using std::cout;
+using std::endl;
+
+class Order {
+public:
+	virtual ~Order() {};
+	virtual bool validate() = 0;
+	virtual void execute() = 0;
+	virtual string getName() { return name; };
+	friend std::ostream& operator<<(std::ostream&, const Order&);
+private:
+	string name = "";
+};
 
 class OrderList {
 public:
 	OrderList();
-	OrderList(const OrderList& orderList);
-	OrderList& operator =(const OrderList& orderList);
+	OrderList(vector<Order*>);
+	//OrderList& operator =(const OrderList& orderList);
 	~OrderList();
-	void remove();
-	void move();
+	void add(Order* order);
+	void remove(int pos);
+	void move(int beginPos, int targetPos);
+	void showOrders();
 private:
-	vector<Order> orders;
-};
-
-class Order {
-public:
-	virtual ~Order();
-	virtual bool validate() = 0;
-	virtual void execute() = 0;
-	virtual string getName() = 0;
-	friend std::ostream& operator<<(std::ostream&, const Order&);
+	vector<Order*> orders;
 };
 
 class Deploy :public Order {
 public:
-	Deploy();
-	~Deploy();
+	Deploy() { name = "deploy"; };
+	~Deploy() {};
 	bool validate();
 	void execute();
-	string getName();
+	string getName() { return name; };
+private:
+	string name;
 };
 
 class Advance :public Order {
 public:
-	Advance();
-	~Advance();
+	Advance() { name = "advance"; };
+	~Advance() {};
 	bool validate();
 	void execute();
-	string getName();
+	string getName() { return name; };
+private:
+	string name;
 };
 
 class Bomb :public Order {
 public:
-	Bomb();
-	~Bomb();
+	Bomb() { name = "bomb"; };
+	~Bomb() {};
 	bool validate();
 	void execute();
-	string getName();
+	string getName() { return name; };
+private:
+	string name;
 };
 
 class Blockade :public Order {
 public:
-	Blockade();
-	~Blockade();
+	Blockade() { name = "blockade"; };
+	~Blockade() {};
 	bool validate();
 	void execute();
-	string getName();
+	string getName() { return name; };
+private:
+	string name;
 };
 
 class Airlift :public Order {
 public:
-	Airlift();
-	~Airlift();
+	Airlift() { name = "airlift"; };
+	~Airlift() {};
 	bool validate();
 	void execute();
-	string getName();
+	string getName() { return name; };
+private:
+	string name;
 };
 
 class Negotiate :public Order {
 public:
-	Negotiate();
-	~Negotiate();
+	Negotiate() { name = "negotiate"; };
+	~Negotiate() {};
 	bool validate();
 	void execute();
-	string getName();
+	string getName() { return name; };
+private:
+	string name;
 };

@@ -3,11 +3,11 @@
 using std::string;
 
 class GameEngine {
-	enum states {
+	enum state {
 		start,
 		maploaded,
 		mapvalidated,
-		palyersadded,
+		playersadded,
 		assignreforcement,
 		issueorders,
 		executeorders,
@@ -19,9 +19,10 @@ public:
 	GameEngine(GameEngine& game);
 	~GameEngine();
 	string getState();
-	void setState();
 	void getCommand();
+	void invalidCommand();
 private:
-	states currentState;
-	void changeState();
+	state currentState;
+	void executeCommand(string command);
+	void changeState(state newState);
 };
